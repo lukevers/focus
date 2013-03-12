@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+	width: 100%;
+	font-family: "Helvetica Neue", Helvetica;
+	color: #222;
+	font-size: 13px;
+}
+
+body {
+	
+}
+
+/*
+==============================
+          HEADERS
+==============================
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+	margin: 0;
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+/*
+==============================
+          CODE/PRE
+==============================
+*/
+
+code {
+	
+}
+
+pre {
+	
+}
