@@ -4,8 +4,8 @@ html, body {
 	margin: 0;
 	width: 100%;
 	font-family: "Helvetica Neue", Helvetica;
-	color: #222;
-	font-size: 13px;
+	color: #333;
+	font-size: 14px;
 }
 
 body {
@@ -98,6 +98,9 @@ tr:nth-child(odd) {
 	padding: 2px 5px;
 	color: #AAA;
 	font-weight: 900;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 .example {
@@ -106,7 +109,9 @@ tr:nth-child(odd) {
 	border: 1px solid #CCC;
 	padding: 10px;
 	padding-top: 30px;
-
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
 /*
@@ -115,27 +120,26 @@ tr:nth-child(odd) {
 ==============================
 */
 
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+::-webkit-input-placeholder {
+    color:    #999;
+}
+:-moz-placeholder {
+    color:    #999;
+}
+::-moz-placeholder { 
+    color: #999;
+}
+:-ms-input-placeholder {
+    color: #999;
+}
+
+textarea, input {
+	font-family: inherit;
 	display: inline-block;
 	font-size: 14px;
-	color: #777;
+	color: #333;
+	padding: 5px;
 	margin-bottom: 5px;
-	padding: 4px 7px;
-	line-height: 20px;
 	background-color: #FFF;
 	border: 1px solid #CCC;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
@@ -145,26 +149,42 @@ input[type="color"] {
 	-moz-transition: border linear .2s, box-shadow linear .2s;
 	-o-transition: border linear .2s, box-shadow linear .2s;
 	transition: border linear .2s, box-shadow linear .2s;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus {
-	border-color: rgba(84, 169, 234, 0.8);
+textarea:focus, input:focus {
+	border-color: rgba(0, 0, 0, 0.4);
 	outline: none !important;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(84,169,234,.4);
-	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(84,169,234,.4);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(84,169,234,.4);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+}
+
+/*
+==============================
+          PRE/CODE
+==============================
+*/
+
+code {
+	background-color: #F6F6F6;
+	padding: 0px 2px;
+	border: 1px solid #CCC;
+	color: #CE6161;
+}
+
+pre code {
+	border: none;
+	padding: 0px;
+	background-color: #FFF !important;
+	color: #333;
+}
+
+pre {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-left: 5px solid #CCC;
+	padding: 5px;
 }
